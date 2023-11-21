@@ -97,7 +97,7 @@ class LoginMethods extends StatelessWidget {
                 child: Center(
                     child: Image.network(
                         height: 20,
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/480px-Google_%22G%22_Logo.svg.png")),
+                        "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png")),
               ),
             )
           ],

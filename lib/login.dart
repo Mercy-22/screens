@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
+        const Row(
           children: [
             Width(
               size: 10.0,
@@ -29,11 +29,11 @@ class LoginScreen extends StatelessWidget {
             ),
           ],
         ),
-        LoginCredentials(),
+        const LoginCredentials(),
         Height(
           size: 25.0,
         ),
-        LoginMethods(),
+        const LoginMethods(),
       ],
     );
   }
@@ -46,7 +46,7 @@ class LoginMethods extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
+        const Row(
           children: [
             Expanded(
               child: Divider(
@@ -76,7 +76,7 @@ class LoginMethods extends StatelessWidget {
               width: 150,
               height: 60,
               child: Card(
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     side: BorderSide(color: Colors.grey)),
                 elevation: 0,
@@ -90,14 +90,14 @@ class LoginMethods extends StatelessWidget {
               width: 150,
               height: 60,
               child: Card(
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     side: BorderSide(color: Colors.grey)),
                 elevation: 0,
                 child: Center(
                     child: Image.network(
                         height: 20,
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/480px-Google_%22G%22_Logo.svg.png")),
+                        "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png")),
               ),
             )
           ],
@@ -108,14 +108,14 @@ class LoginMethods extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Don't have an accout?",
               style: TextStyle(fontSize: 12),
             ),
             TextButton(
                 onPressed: () =>
                     Navigator.pushReplacementNamed(context, '/Register'),
-                child: Text(
+                child: const Text(
                   "Register Now!",
                   style: TextStyle(color: Colors.indigo, fontSize: 12),
                 ))
@@ -138,16 +138,16 @@ class LoginCredentials extends StatelessWidget {
           width: double.infinity,
           child: Card(
             elevation: 0,
-            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             color: Colors.grey[200],
-            child: Align(
+            child: const Align(
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text("Enter your Email"),
                     Width(
-                      size: 150.0,
+                      size: 185.0,
                     )
                   ],
                 )),
@@ -161,9 +161,9 @@ class LoginCredentials extends StatelessWidget {
           width: double.infinity,
           child: Card(
             elevation: 0,
-            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             color: Colors.grey[200],
-            child: Align(
+            child: const Align(
                 alignment: Alignment.centerLeft,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -182,7 +182,7 @@ class LoginCredentials extends StatelessWidget {
         ),
         TextButton(
           onPressed: () => Navigator.pushReplacementNamed(context, '/Home'),
-          child: SizedBox(
+          child: const SizedBox(
             height: 45,
             width: double.infinity,
             child: Card(

@@ -6,89 +6,87 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              width: double.infinity,
-              height: 550,
-              color: Color.fromARGB(225, 225, 226, 228),
-              child: Column(children: [
-                Container(
-                  margin: EdgeInsets.all(20),
-                  height: 400,
-                  width: 400,
-                  child: Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(200),
-                              topRight: Radius.circular(200))),
-                      color: Colors.black,
-                      child: ClipRRect(
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 550,
+            color: const Color.fromARGB(225, 225, 226, 228),
+            child: Column(children: [
+              Container(
+                margin: const EdgeInsets.all(20),
+                height: 400,
+                width: 400,
+                child: Card(
+                    shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(200),
-                            topRight: Radius.circular(200)),
-                        child: Image.network(
-                          "https://d39l2hkdp2esp1.cloudfront.net/img/photo/160633/160633_00_2x.jpg",
-                          filterQuality: FilterQuality.high,
-                          fit: BoxFit.cover,
-                        ),
-                      )),
-                ),
-                SizedBox(
-                  height: 80,
-                  width: 150,
-                  child: Card(
-                    color: Colors.transparent,
-                    elevation: 0,
-                    shape: OvalBorder(side: BorderSide(color: Colors.black)),
-                    child: Center(
-                        child: Text(
-                      "Shop Now",
-                      style: TextStyle(fontSize: 20),
+                            topRight: Radius.circular(200))),
+                    color: Colors.black,
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(200),
+                          topRight: Radius.circular(200)),
+                      child: Image.network(
+                        "https://d39l2hkdp2esp1.cloudfront.net/img/photo/160633/160633_00_2x.jpg",
+                        filterQuality: FilterQuality.high,
+                        fit: BoxFit.cover,
+                      ),
                     )),
-                  ),
-                ),
-              ]),
-            ),
-            Container(
-              width: double.infinity,
-              height: 180,
-              color: Colors.yellow,
-              child: Image.network(
-                "https://holistik.nl/wp-content/uploads/2022/08/vitamine-A.jpeg",
-                fit: BoxFit.fitWidth,
               ),
+              const SizedBox(
+                height: 80,
+                width: 150,
+                child: Card(
+                  color: Colors.transparent,
+                  elevation: 0,
+                  shape: OvalBorder(side: BorderSide(color: Colors.black)),
+                  child: Center(
+                      child: Text(
+                    "Shop Now",
+                    style: TextStyle(fontSize: 20),
+                  )),
+                ),
+              ),
+            ]),
+          ),
+          Container(
+            width: double.infinity,
+            height: 180,
+            color: Colors.yellow,
+            child: Image.network(
+              "https://holistik.nl/wp-content/uploads/2022/08/vitamine-A.jpeg",
+              fit: BoxFit.fitWidth,
             ),
-            Height(
-              size: 50.0,
-            ),
-            Text(
-              "TRENDING NOW",
-              style: TextStyle(color: Colors.black, fontSize: 25),
-            ),
-            Height(
-              size: 25.0,
-            ),
-            ViewOptions(),
-            Height(
-              size: 30.0,
-            ),
-            TrendingOptions(),
-            Height(
-              size: 30.0,
-            ),
-            Text(
-              "ACTUAL CATAGORIES",
-              style: TextStyle(color: Colors.black, fontSize: 25),
-            ),
-            Height(
-              size: 30.0,
-            ),
-            Catagories(),
-          ],
-        ),
+          ),
+          Height(
+            size: 50.0,
+          ),
+          const Text(
+            "TRENDING NOW",
+            style: TextStyle(color: Colors.black, fontSize: 25),
+          ),
+          Height(
+            size: 25.0,
+          ),
+          const ViewOptions(),
+          Height(
+            size: 30.0,
+          ),
+          const TrendingOptions(),
+          Height(
+            size: 30.0,
+          ),
+          Text(
+            "ACTUAL CATAGORIES",
+            style: TextStyle(color: Colors.black, fontSize: 25),
+          ),
+          Height(
+            size: 30.0,
+          ),
+          Catagories(),
+        ],
       ),
     );
   }
@@ -108,7 +106,7 @@ class ViewOptions extends StatelessWidget {
           child: Card(
             color: Colors.grey[300],
             elevation: 0,
-            child: Center(child: Text("All")),
+            child: const Center(child: Text("All")),
           ),
         ),
         SizedBox(
@@ -155,50 +153,206 @@ class TrendingOptions extends StatelessWidget {
           size: 30.0,
         ),
         Container(
-          width: 150,
-          height: 200,
-          color: Colors.black,
-        ),
+            width: 150,
+            height: 250,
+            color: Colors.transparent,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Card(
+                      color: Colors.grey[300],
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
+                        child: Image.network(
+                          "https://d39l2hkdp2esp1.cloudfront.net/img/photo/160633/160633_00_2x.jpg",
+                          filterQuality: FilterQuality.high,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                ),
+                Text(" Olive plain dress"),
+                Text(
+                  " \$13.99",
+                  style: TextStyle(
+                      color: Color.fromARGB(223, 65, 74, 197), fontSize: 16),
+                )
+              ],
+            )),
         Width(
           size: 20.0,
         ),
         Container(
-          width: 150,
-          height: 200,
-          color: Colors.blue,
-        ),
+            width: 150,
+            height: 250,
+            color: Colors.transparent,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Card(
+                      color: Colors.grey[300],
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
+                        child: Image.network(
+                          "https://d39l2hkdp2esp1.cloudfront.net/img/photo/160633/160633_00_2x.jpg",
+                          filterQuality: FilterQuality.high,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                ),
+                Text(" Olive plain dress"),
+                Text(
+                  " \$13.99",
+                  style: TextStyle(
+                      color: Color.fromARGB(223, 65, 74, 197), fontSize: 16),
+                )
+              ],
+            )),
         Width(
           size: 30.0,
         ),
         Container(
-          width: 150,
-          height: 200,
-          color: Colors.black,
-        ),
+            width: 150,
+            height: 250,
+            color: Colors.transparent,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Card(
+                      color: Colors.grey[300],
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
+                        child: Image.network(
+                          "https://d39l2hkdp2esp1.cloudfront.net/img/photo/160633/160633_00_2x.jpg",
+                          filterQuality: FilterQuality.high,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                ),
+                Text(" Olive plain dress"),
+                Text(
+                  " \$13.99",
+                  style: TextStyle(
+                      color: Color.fromARGB(223, 65, 74, 197), fontSize: 16),
+                )
+              ],
+            )),
         Width(
           size: 30.0,
         ),
         Container(
-          width: 150,
-          height: 200,
-          color: Colors.blue,
-        ),
+            width: 150,
+            height: 250,
+            color: Colors.transparent,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Card(
+                      color: Colors.grey[300],
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
+                        child: Image.network(
+                          "https://d39l2hkdp2esp1.cloudfront.net/img/photo/160633/160633_00_2x.jpg",
+                          filterQuality: FilterQuality.high,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                ),
+                Text(" Olive plain dress"),
+                Text(
+                  " \$13.99",
+                  style: TextStyle(
+                      color: Color.fromARGB(223, 65, 74, 197), fontSize: 16),
+                )
+              ],
+            )),
         Width(
           size: 30.0,
         ),
         Container(
-          width: 150,
-          height: 200,
-          color: Colors.black,
-        ),
+            width: 150,
+            height: 250,
+            color: Colors.transparent,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Card(
+                      color: Colors.grey[300],
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
+                        child: Image.network(
+                          "https://d39l2hkdp2esp1.cloudfront.net/img/photo/160633/160633_00_2x.jpg",
+                          filterQuality: FilterQuality.high,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                ),
+                Text(" Olive plain dress"),
+                Text(
+                  " \$13.99",
+                  style: TextStyle(
+                      color: Color.fromARGB(223, 65, 74, 197), fontSize: 16),
+                )
+              ],
+            )),
         Width(
           size: 30.0,
         ),
         Container(
-          width: 150,
-          height: 200,
-          color: Colors.blue,
-        ),
+            width: 150,
+            height: 250,
+            color: Colors.transparent,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Card(
+                      color: Colors.grey[300],
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10)),
+                        child: Image.network(
+                          "https://d39l2hkdp2esp1.cloudfront.net/img/photo/160633/160633_00_2x.jpg",
+                          filterQuality: FilterQuality.high,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                ),
+                Text(" Olive plain dress"),
+                Text(
+                  " \$13.99",
+                  style: TextStyle(
+                      color: Color.fromARGB(223, 65, 74, 197), fontSize: 16),
+                )
+              ],
+            )),
         Width(
           size: 30.0,
         ),
@@ -219,6 +373,10 @@ class Catagories extends StatelessWidget {
           width: double.infinity,
           height: 350,
           color: Colors.blueGrey,
+          child: Image.network(
+            "https://holistik.nl/wp-content/uploads/2022/08/vitamine-A.jpeg",
+            fit: BoxFit.fitHeight,
+          ),
         ),
         Height(
           size: 25.0,
@@ -239,6 +397,10 @@ class Catagories extends StatelessWidget {
           width: double.infinity,
           height: 350,
           color: Colors.blue,
+          child: Image.network(
+            "https://holistik.nl/wp-content/uploads/2022/08/vitamine-A.jpeg",
+            fit: BoxFit.fitHeight,
+          ),
         ),
         Height(
           size: 25.0,
@@ -259,6 +421,10 @@ class Catagories extends StatelessWidget {
           width: double.infinity,
           height: 350,
           color: Colors.black,
+          child: Image.network(
+            "https://holistik.nl/wp-content/uploads/2022/08/vitamine-A.jpeg",
+            fit: BoxFit.fitHeight,
+          ),
         ),
         Height(
           size: 25.0,
@@ -358,6 +524,10 @@ class Catagories extends StatelessWidget {
               width: 370,
               height: 450,
               color: Colors.white,
+              child: Image.network(
+                "https://holistik.nl/wp-content/uploads/2022/08/vitamine-A.jpeg",
+                fit: BoxFit.fitHeight,
+              ),
             ),
             Height(
               size: 45.0,
@@ -459,6 +629,10 @@ class Catagories extends StatelessWidget {
                     width: double.infinity,
                     height: 400,
                     color: Colors.indigo,
+                    child: Image.network(
+                      "https://holistik.nl/wp-content/uploads/2022/08/vitamine-A.jpeg",
+                      fit: BoxFit.fitHeight,
+                    ),
                   ),
                   Height(
                     size: 20.0,
@@ -658,8 +832,14 @@ class Catagories extends StatelessWidget {
                 height: 250,
                 width: 260,
                 child: Card(
-                  color: Colors.indigo,
-                ),
+                    color: Colors.indigo,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: Image.network(
+                        "https://holistik.nl/wp-content/uploads/2022/08/vitamine-A.jpeg",
+                        fit: BoxFit.fitHeight,
+                      ),
+                    )),
               ),
               Height(
                 size: 50.0,
